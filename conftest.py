@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 #scope="function" это дефолтное состояние, которое используется для открытия браузера в setup и закрытия в teardown каждого теста
 # что бы тесты были независимые
 
-def driver():  #фикстура создания драйвера. Открыте и после выполнения теста закрытие
+def driver():  #фикстура создания драйвера. Открыте и после выполнения теста закрытие.
     driver = driver = webdriver.Chrome(ChromeDriverManager().install()) #открытие браузера
     driver.maximize_window() #открытие браузера на весь экран
     yield driver  #teardown фикстуры - операции после завершения теста
